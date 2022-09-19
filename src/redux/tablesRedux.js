@@ -30,7 +30,7 @@ export const updateTableRequest = (updatedTable) => {
             body: JSON.stringify(updatedTable),
         };
         
-        fetch('http://localhost:3131/api/tables' + updatedTable.id, options)
+        fetch('http://localhost:3131/api/tables/' + updatedTable.id, options)
             .then(() => dispatch(editTable(updatedTable)))
     }
 }
