@@ -61,7 +61,7 @@ const TableForm = ({
                         className={clsx("d-inline w-25 mb-4", styles.peopleAmount__input)} 
                         size="lg" 
                         type="text" 
-                        value={peopleAmount}
+                        value={status === 'Busy' ? peopleAmount : 0}
                         onChange={e => setPeopleAmount(e.target.value)}
                         />
                         {errors.peopleAmount && <span className="d-block form-text text-danger mt-2">This field is required</span>}
@@ -83,7 +83,7 @@ const TableForm = ({
                         className={clsx("d-inline w-25 mb-4", styles.peopleAmount__input)} 
                         size="lg" 
                         type="text" 
-                        value={bill}
+                        value={status === 'Busy' ? bill : 0 }
                         onChange={e => setBill(e.target.value)}
                         />
                         {errors.bill && <span className="d-block form-text text-danger mt-2">This field is required</span>}
