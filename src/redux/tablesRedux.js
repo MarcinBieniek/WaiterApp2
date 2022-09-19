@@ -1,4 +1,4 @@
-import shortid from 'shortid';
+
 
 // selectors
 export const getAllTables = ({ tables }) => tables;
